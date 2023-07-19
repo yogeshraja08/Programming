@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            drop down navigation bar
+        </title>
+        <meta charset="utf-8" name="viewport" content="width=device-width ,initial-scale=2.0"/>
+        <style>
+            .navbar{
+                background-color: rgba(128, 128, 128, 0.671);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+             /* min-width: 720px;*/
+            }
+            .main-list{
+                display: inline-block;
+                background-color: rgba(54, 53, 53, 0.842);
+                padding: 5px;
+                border: 1px solid rgba(54, 53, 53, 0.842);
+                border-radius: 5px;
+            }
+            .main-list:hover,.main-list:focus,.main-list:active{
+                background-color: rgba(49, 36, 36);
+            }
+            .main-list-link{
+                color: aquamarine;
+                text-decoration: none;
+                font-size: 20px;   
+            }
+            .main-list-link:hover,.main-list-link:focus,.main-list-link:active{
+                border-bottom: 0.5px solid aqua;
+                font-size: 22px;
+            }
+            .sub-list{
+                list-style: none;
+                background-color: rgb(49, 36, 36);
+                padding: 5px;
+            }
+            .sub-list-link{
+                color: rgba(222, 184, 135, 0.815);
+                text-decoration: none;
+                padding: 5px;
+                font-size: 15px;
+            }
+            .sub-list-link:hover,.sub-list-link:focus,.sub-list-link:active{
+                border: 1px ridge burlywood;
+                border-radius: 2px;
+                font-size: 17px;
+            }
+
+            .main-list ul{
+                display:none;
+            }
+
+            /*--------------------------------------------------*/
+            .content{
+                font-family: 'Times New Roman', Times, serif;
+                text-transform: uppercase;
+                font-size: 25px;
+                margin-top: 65px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <nav id="navigation">
+                <ol>
+                    <li class="main-list">
+                        <a class="main-list-link" onclick="home()" href="#">HOME</a>
+                        <ul id="home-ul">
+                            <li class="sub-list"><a class="sub-list-link" href="#">website</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">youtube channel</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a class="main-list-link" onclick="course()" href="#">COURSE</a>
+                        <ul id="course-ul">
+                            <li class="sub-list"><a class="sub-list-link" href="#">HTML</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">CSS</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">JAVASCRIPT</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">PHP</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">PYTHON</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a class="main-list-link" onclick="app()" href="#">APP</a>
+                    </li>
+                    <li class="main-list">
+                        <a class="main-list-link" onclick="login()" href="#">LOGIN</a>
+                        <ul id="login-ul">
+                            <li class="sub-list"><a class="sub-list-link" href="#">LOGIN</a></li>
+                            <li class="sub-list"><a class="sub-list-link" href="#">SIGN UP</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="content">
+            abcdefghijklmnopqrstuvwxyz
+
+                <br>
+                            TOTAL HTML COURSE
+                I have learnt all HTML course.
+                I have started the html course on my 8thstudies.
+                I have finished my html course after completing 12th in 28thmay,2020.
+                audio ~ only audio format but any types of audio format | url should pasted in srcif one format , source src if multiple format
+                video ~ only video but any types of video formats | url should pasted in srcif one format , source src if multiple format
+                embed ~ videos or audio with frame can be used | url should pasted only in src<br>
+
+                back to top
+                iframe~ videos or audio can be used
+                src(URL)
+                controls(no elements){deprecated attribute}
+                allow(fullscreen, accelerometer, gyroscopic)
+
+                table~ set table in webpage
+                The attributes of table are
+
+                cellpading
+                cellspacing
+                border
+                bordercolor
+                align
+                bgcolor
+                height
+                width
+                It has four section
+
+                captain
+                - gives the title of table
+                thead
+                - decide the top of table
+                tbody
+                - decide the middle part of table
+                tfoot
+                - decide the bottom of table
+                The tags in table are
+        </div>
+        <script>
+            function home(){
+                document.getElementById("home-ul").style.display="block";
+                document.getElementById("course-ul").style.display="none";
+                document.getElementById("login-ul").style.display="none";
+            }
+            function course(){
+                document.getElementById("home-ul").style.display="none";
+                document.getElementById("course-ul").style.display="block";
+                document.getElementById("login-ul").style.display="none";
+            }
+            function app(){
+                document.getElementById("home-ul").style.display="none";
+                document.getElementById("course-ul").style.display="none";
+                document.getElementById("login-ul").style.display="none";
+            }
+            function login(){
+                document.getElementById("home-ul").style.display="none";
+                document.getElementById("course-ul").style.display="none";
+                document.getElementById("login-ul").style.display="block";
+            }
+        </script>
+    </body>
+</html>

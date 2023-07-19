@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>own form creation</title>
+</head>
+<body>
+<h1>form</h1>
+<form method="get" action="process">
+username:<br>
+<input type ="text" name="username" value="name" placeholder="enter ur name"><br>
+<select>
+<option selected>select your gender</option>
+<option value="male">male</option>
+<option value="female">female</option>
+</select><br>
+password:<br>
+<label for="pwd">
+<input type="password" name="password" id="pwd" placeholder="minimum 8 characters" required></label><br>
+<label for="dob">date of birth: </label><br>
+<input type="date" name="dob" id="dob" ><br>
+<label for="age">age:<br>
+<input type="number" name="age" value="age" required min="18" max="40" ></label><br>
+Email:<br>
+<label for="email_id">
+<input type="text" name="email_id" id="email_id" required></label>
+<marquee><mark>make sure that you are not a robot</mark></marquee>
+<input type="checkbox" value="not robot">I am not a robot<br>
+security pin:
+<input type="text" value="y 0 g E" size=1>
+<input type="text" size=25 placeholder="enter the security pin given above"><br><br>
+<input type="submit" value="submit" name="login-button" ><br><br>
+<input type="reset" value="erase all data" name="reset">
+<marquee scrollamount=100>______________________________________________________</marquee>
+
+<script type="text/javascript">
+var name=prompt("please enter password:","password");
+if(name==6963)
+{
+	alert("you are accepted");
+}
+else
+{
+	alert("your password is wrong");
+}
+</script>
+</body>
+</html>

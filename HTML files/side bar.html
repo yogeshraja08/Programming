@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            side bar
+        </title>
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            #full-content{
+                background-color: tan;
+            }
+            
+            body table tr #sidebar-td{
+                width: auto;
+            }
+            body table tr #sidebar-td #sidebar table{
+                width: 100%;
+            }
+            .main-sidebar a{
+                color: white;
+                text-decoration: none;
+                font-weight: bolder;
+                font-size: 22px;
+            }
+            .sub-sidebar a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .co-sub-sidebar a{
+                color: white;
+                text-decoration: none;
+                font-weight:lighter;
+                font-size: 18px;
+            }
+
+            .main-sidebar{
+                background-color: rgba(116, 102, 102, 0.678);
+                padding: 5px;
+                border-radius: 5px;
+            }
+            .main-sidebar:hover{
+                background-color: rgba(172, 144, 144, 0.678);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px rgba(172, 144, 144, 0.678);
+            }
+            .main-sidebar a:focus{
+                background-color: rgba(172, 144, 144, 0.678);
+            }
+
+            .sub-sidebar{
+                background-color: rgba(172, 144, 144, 0.678);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px rgba(172, 159, 144, 0.678);
+            }
+            .sub-sidebar:hover{
+                background-color: rgba(136, 117, 65, 0.678);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px rgba(136, 117, 65, 0.678);
+            }
+            .sub-sidebar a:focus{
+                background-color: rgba(136, 117, 65, 0.678);
+            }
+
+            .co-sub-sidebar{
+                background-color: rgba(136, 117, 65, 0.678);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px rgba(136, 117, 65, 0.678);
+            }
+            .co-sub-sidebar:hover{
+                background-color: rgba(166, 255, 0, 0.548);
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 2px 1px rgba(166, 255, 0, 0.548);
+            }
+            .co-sub-sidebar a:focus{
+                background-color: rgba(166, 255, 0, 0.548);
+            }
+
+            #home,#course,#products,#app,#login{
+                border: 1px solid rgb(61, 33, 33, 0.795);
+                box-shadow: 1px 1px 1px 3px rgb(61, 33, 33, 0.795) inset;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: rgba(61, 33, 33, 0.795);
+            }
+            #home-subdiv,#course-subdiv,#products-subdiv,#login-subdiv{
+                border: 1px solid rgba(116, 102, 102, 0.678);
+                box-shadow: 1px 1px 1px 3px rgba(116, 102, 102, 0.678) inset;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: rgba(116, 102, 102, 0.678);
+                display: none;
+            }
+            #html,#css{
+                border: 1px solid rgba(161, 133, 133, 0.521);
+                box-shadow: 1px 1px 1px 3px rgba(161, 133, 133, 0.521) inset;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: rgba(161, 133, 133, 0.521);
+                display: none;
+            }
+
+
+            #close-sidebar a{
+                color: blanchedalmond;
+            }
+            #close-sidebar{
+                text-align: left;
+            }
+            #close-sidebar:hover{
+                background-color: red;
+            }
+
+            #sidebar table tr #close-td{
+                background-color: gray;
+            }
+
+            #contentbar table tr #open-td{
+                background-color: grey;
+            }
+
+            #open-sidebar:focus,#open-sidebar:hover{
+                background-color:rgb(39, 27, 27);
+            }
+
+            #open-td #open-sidebar a{
+                color: ivory;
+                text-align: left;
+            }
+            #open-td #open-sidebar a:hover,#open-td #open-sidebar a:focus{
+                text-align: left;
+                background-color: rgb(32, 25, 25);
+                border-radius: 3px;
+            }
+
+            #content{
+                text-indent: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table id="full-content">
+            <tr>
+                <td style="display:none;" id="sidebar-td">
+                    <div id="sidebar">
+                        <table>
+                            <tr>
+                                <td id="topics">
+                                    <div id="home">
+                                        <p class="main-sidebar"><a onclick="home()" href="#">HOME</a></p>
+                                        <div id="home-subdiv">
+                                            <p class="sub-sidebar"><a href="#">welcome page</a></p>
+                                            <p class="sub-sidebar"><a href="#">more about us</a></p>
+                                        </div>
+                                    </div>
+                                    <div id="course">
+                                        <p class="main-sidebar"><a onclick="course()" href="#">COURSE</a></p>
+                                        <div id="course-subdiv">
+                                            <p class="sub-sidebar"><a onclick="html()" href="#">HTML</a></p>
+                                                <div id="html">
+                                                    <p class="co-sub-sidebar"><a href="#">html-1</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">html-2</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">html-3</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">html-4</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">html-5</a></p>
+                                                </div>
+                                            <p class="sub-sidebar"><a onclick="css()" href="#">CSS</a></p>
+                                                <div id="css">
+                                                    <p class="co-sub-sidebar"><a href="#">css-1</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">css-2</a></p>
+                                                    <p class="co-sub-sidebar"><a href="#">css-3</a></p>
+                                                </div>
+                                            <p class="sub-sidebar"><a onclick="javascript()" href="#">JAVASCRIPT</a></p>
+                                                <div id="javascript"></div>
+                                            <p class="sub-sidebar"><a onclick="php()" href="#">PHP</a></p>
+                                                <div id="php"></div>
+                                            <p class="sub-sidebar"><a onclick="python()" href="#">PYTHON</a></p>
+                                                <div id="python"></div>
+                                            <p class="sub-sidebar"><a onclick="jquery()" href="#">JQUERY</a></p>
+                                                <div id="jquery"></div>
+                                            <p class="sub-sidebar"><a onclick="java()" href="#">JAVA</a></p>
+                                                <div id="java"></div>
+                                        </div>
+                                    </div>
+                                    <div id="products">
+                                        <p class="main-sidebar"><a onclick="products()" href="#">OUR PRODUCTS</a></p>
+                                        <div id="products-subdiv">
+                                            <p class="sub-sidebar"><a href="#">website</a></p>
+                                            <p class="sub-sidebar"><a href="#">youtube channel</a></p>
+                                            <p class="sub-sidebar"><a href="#">blogspot</a></p>
+                                        </div>
+                                    </div>
+                                    <div id="app">
+                                        <p class="main-sidebar"><a onclick="app()" href="#">GET OUR APP</a></p>
+                                    </div>
+                                    <div id="login">
+                                        <p class="main-sidebar"><a onclick="login()" href="#">LOGIN</a></p>
+                                        <div id="login-subdiv">
+                                            <p class="sub-sidebar"><a href="#">login</a></p>
+                                            <p class="sub-sidebar"><a href="#">sign up</a></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td onclick="close_sidebar()" id="close-td">
+                                    <span title="close">
+                                        <p id="close-sidebar">
+                                            <a href="#">
+                                                &LeftAngleBracket;
+                                            </a>
+                                        </p>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td id="contentbar-td">
+                    <div id="contentbar">
+                        <table>
+                            <tr>
+                                <td onclick="open_sidebar()" id="open-td">
+                                    <span title="open menubar">
+                                        <p id="open-sidebar">
+                                            <a href="#">
+                                                &RightAngleBracket;
+                                            </a>
+                                        </p>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div id="content" style="font-size: 25px;">
+                                        <br>
+                                        TOTAL HTML COURSE
+                            I have learnt all HTML course.
+                            I have started the html course on my 8thstudies.
+                            I have finished my html course after completing 12th in 28thmay,2020.
+                            audio ~ only audio format but any types of audio format | url should pasted in srcif one format , source src if multiple format
+                            video ~ only video but any types of video formats | url should pasted in srcif one format , source src if multiple format
+                            embed ~ videos or audio with frame can be used | url should pasted only in src<br>
+                             
+                            back to top
+                            iframe~ videos or audio can be used
+                            src(URL)
+                            controls(no elements){deprecated attribute}
+                            allow(fullscreen, accelerometer, gyroscopic)
+                            
+                            table~ set table in webpage
+                            The attributes of table are
+                            
+                            cellpading
+                            cellspacing
+                            border
+                            bordercolor
+                            align
+                            bgcolor
+                            height
+                            width
+                            It has four section
+                            
+                            captain
+                            - gives the title of table
+                            thead
+                            - decide the top of table
+                            tbody
+                            - decide the middle part of table
+                            tfoot
+                            - decide the bottom of table
+                            The tags in table are
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        //open and close sidebar
+        function open_sidebar(){
+            document.getElementById("open-td").style.display = "none";
+            document.getElementById("sidebar-td").style.display = "block";
+        }
+        function close_sidebar(){
+            document.getElementById("sidebar-td").style.display = "none";
+            document.getElementById("open-td").style.display = "block"           
+        }
+        //------------------
+        // display sub topics
+        function home(){
+            document.getElementById("home-subdiv").style.display = "block";
+            document.getElementById("course-subdiv").style.display = "none";
+            document.getElementById("products-subdiv").style.display = "none";
+            document.getElementById("app-subdiv").style.display = "none";
+            document.getElementById("login-subdiv").style.display = "none";
+        }
+
+        function course(){
+            document.getElementById("home-subdiv").style.display = "none";
+            document.getElementById("course-subdiv").style.display = "block";
+            document.getElementById("products-subdiv").style.display = "none";
+            document.getElementById("app-subdiv").style.display = "none";
+            document.getElementById("login-subdiv").style.display = "none";
+        }
+
+        function products(){
+            document.getElementById("home-subdiv").style.display = "none";
+            document.getElementById("course-subdiv").style.display = "none";
+            document.getElementById("products-subdiv").style.display = "block";
+            document.getElementById("app-subdiv").style.display = "none";
+            document.getElementById("login-subdiv").style.display = "none";
+        }
+
+        function app(){
+            document.getElementById("home-subdiv").style.display = "none";
+            document.getElementById("course-subdiv").style.display = "none";
+            document.getElementById("products-subdiv").style.display = "none";
+            document.getElementById("app-subdiv").style.display = "block";
+            document.getElementById("login-subdiv").style.display = "none";
+        }
+
+        function login(){
+            document.getElementById("home-subdiv").style.display = "none";
+            document.getElementById("course-subdiv").style.display = "none";
+            document.getElementById("products-subdiv").style.display = "none";
+            document.getElementById("app-subdiv").style.display = "none";
+            document.getElementById("login-subdiv").style.display = "inline";
+        }
+        //-----------------------
+        //display co-sub topics
+        function html(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function html(){
+            document.getElementById("html").style.display = "block";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function css(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "block";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function javascript(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function php(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function python(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function jquery(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+
+        function java(){
+            document.getElementById("html").style.display = "none";
+            document.getElementById("css").style.display = "none";
+            document.getElementById("javascript").style.display = "none";
+            document.getElementById("php").style.display = "none";
+            document.getElementById("python").style.display = "none";
+            document.getElementById("jquery").style.display = "none";
+            document.getElementById("java").style.display = "none";
+        }
+    </script>
+</html>

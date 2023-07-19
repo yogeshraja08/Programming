@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>date and time</title>
+</head>
+<body>
+<script type="text/javascript">
+function date(){
+var date = new Date();
+document.getElementById("p").innerHTML = date;
+}
+
+function network(){
+var network = navigator.onLine;
+document.getElementById("para").innerHTML = network;
+}
+</script>
+<button onclick="date()">show date and time</button>
+<button onclick="network()">network status</button>
+<p id="p"></p>
+<p id="para"></p>
+
+</body>
+</html>

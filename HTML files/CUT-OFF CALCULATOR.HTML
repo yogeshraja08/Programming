@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CUT-OFF CALCULATOR
+        </title>
+        <meta charset="utf-8">
+        <link rel="icon" href="E:\software\icon\Calculator.png">
+        <style>
+            body{
+                background-color: gray;
+            }
+
+            marquee{
+                color:aquamarine;
+                background-color: rgba(243, 136, 6, 0.589);
+            }
+
+            #courses{
+                height: 50px;
+                padding: 5px;
+                background-color: khaki;
+            }
+            
+            #choose{
+                text-align: center;
+            }
+
+            #eng{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                left: 60px;
+                width: 170px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+            }
+
+            #med{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                right: 60px;
+                width: 170px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+            }
+
+            #eng:hover{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                left: 60px;
+                width: 174px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+                box-shadow: 1px 1px 3px 5px gold;
+                cursor: grab;
+            }
+
+            #med:hover{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                right: 60px;
+                width: 174px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+                box-shadow: 1px 1px 3px 5px gold;
+                cursor: grab;
+            }
+
+            #eng:active{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                left: 60px;
+                width: 180px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+                box-shadow: 1px 1px 3px 5px gold;
+            }
+
+            #med:active{
+                color: black;
+                background-color: lightcoral;
+                position: absolute;
+                right: 60px;
+                width: 180px;
+                height: 21px;
+                padding-left: 13px;
+                border: 2px ridge rgb(181, 9, 233);
+                border-radius: 30px;
+                box-shadow: 1px 1px 3px 5px gold;
+            }
+
+            .caption{
+                color: red;
+                text-align: center;
+                padding-bottom: 5px;
+                text-decoration: underline;
+                border-bottom: 2px dashed red;
+            }
+
+            #eng-subjects,#med-subjects{
+                border: 1px ridge black;
+                border-radius: 40px;
+                padding: 15px;
+                background-color: greenyellow;
+                display: none;
+            }
+
+            input{
+                width:100px;
+                height: 20px;
+                border: 0.3px ridge goldenrod;
+                border-radius: 20px;
+            }
+
+            input:focus{
+                width:150px;
+                height: 22px;
+                border: 0.6px ridge goldenrod;
+                border-radius: 23px;
+                transition: width 1s;
+            }
+
+            button{
+                width:200px;
+                height: 30px;
+                border: 0.3px ridge goldenrod;
+                border-radius: 20px;
+            }
+
+            button:hover{
+                width:220px;
+                height: 35px;
+                border: 0.5px ridge goldenrod;
+                border-radius: 20px;
+                box-shadow: 1px 1px 2px 2px hotpink;
+            }
+
+        </style>
+    </head>
+    <body>
+            <p><marquee><h1>
+                CALCULATE YOUR CUT-OFF FOR ENGINEERING AND MEDICAL FIELD COURSES
+            </h1></marquee></p>
+            
+            <div id="courses">
+            <span title="calculate for engineering" id="eng" onclick="eng()">ENGINEERING</span>
+            <span title="calculate for medical " id="med" onclick="med()">MEDICAL</span>
+            <br>
+            <p id="choose">CLICK ON THE FIELD THAT YOU WANT TO PUT CUT-OFF</p>
+            </div>
+            <div id="eng-subjects">
+                <h3 class="caption">PLEASE ENTER YOUR MARKS CORRECTLY</h3>
+                <form method="POST">
+                    <b><big>PHYSICS:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100" required id="physics-mark-eng"></span><br><br><hr>
+                    <b><big>CHEMISTRY:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100" required id="chemistry-mark-eng"></span><br><br><hr>
+                    <b><big>MATHEMATICS:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100" required id="maths-mark-eng"></span><br><br><hr>  
+                    <button onclick="show_eng_mark()">show cut-off</button>  
+                </form>
+            </div>
+            <div id="med-subjects">
+                <h3 class="caption">PLEASE ENTER YOUR MARKS CORRECTLY</h3>
+                <form method="POST">
+                    <b><big>PHYSICS:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100"required id="physics-mark-med"></span><br><br><hr>
+                    <b><big>CHEMISTRY:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100" required id="chemistry-mark-med"></span><br><br><hr>
+                    <b><big>BIOLOGY:</big></b><br><span title="This field is required"><input type="number" placeholder="out of 100"required id="biology-mark-med"></span><br><br><hr>
+                    <button onclick="show_med_mark()">show cut-off</button>  
+                </form>
+            </div>
+            <script>
+                // get name from user
+                var name = prompt("ENTER YOUR NAME : ","NAME");
+
+                // choosing course
+                function eng(){
+                    document.getElementById("eng-subjects").style.display = "block";
+                    document.getElementById("med-subjects").style.display = "none";
+                }
+
+                function med(){
+                    document.getElementById("med-subjects").style.display = "block";
+                    document.getElementById("eng-subjects").style.display = "none";
+                }
+
+                // engineering cut-off
+                function show_eng_mark(){
+                    var physics_eng = document.getElementById("physics-mark-eng").value;
+                    var chemistry_eng = document.getElementById("chemistry-mark-eng").value;
+                    var maths_eng = document.getElementById("maths-mark-eng").value;
+                    var cut_off_eng = ((Number(physics_eng) + Number(chemistry_eng)) / 2) + Number(maths_eng);
+                    alert("hello!"+name+"\nyour cut-off mark is : "+cut_off_eng);
+                }
+
+                // medical cut-off
+                function show_med_mark(){
+                    var physics_med = document.getElementById("physics-mark-med").value;
+                    var chemistry_med = document.getElementById("chemistry-mark-med").value;
+                    var biology_med = document.getElementById("biology-mark-med").value;
+                    var cut_off_med = ((Number(physics_med) + Number(chemistry_med)) / 2) + Number(biology_med);
+                    alert("hello! "+name+"\nyour cut-off mark is : "+cut_off_med);
+                }
+            </script>
+    </body>
+</html>

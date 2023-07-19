@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Partner</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+
+        h1{
+            text-align: center;
+            color: red;
+            cursor: default;
+        }
+
+        p{
+            font-size: x-large;
+        }
+
+        p input{
+            width: 40%;
+            height: 10%;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: yellow;
+            color: red;
+            transition: all 500ms;
+        }
+
+        p input:hover,p input:focus{
+            width: 60%;
+            height: 15%;
+            padding: 7px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: yellow;
+            color: black;
+        }
+
+        button{
+            font-size: larger;
+            padding: 5px;
+            border: 2px white solid;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 1px rgba(255, 217, 0, 0.6);
+            transition: all 500ms;
+            background-color: darkgoldenrod;
+            color: white;
+        }
+
+        button:hover{
+            box-shadow: 1px 1px 1px 1px rgba(141, 120, 2, 0.7);
+            background-color: rgb(233, 177, 34);
+        }
+
+        #loadingBg{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            left: 0%;
+            top: 0%;
+            display: none;
+        }
+
+        #loading{
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            left: 45%;
+            top: 40%;
+            border: 5px solid white;
+            border-top: 7px solid skyblue;
+            border-radius: 50%;
+            animation: loadingCircle 700ms infinite linear;
+            display: none;
+        }
+        @keyframes loadingCircle {
+            0%{rotate: 0deg;}
+            100%{rotate: 360deg;}
+        }
+
+        #result{
+            display: none;
+            border: 5px solid ;
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 30px;
+            animation: result_animation 5s linear infinite;
+        }
+        @keyframes result_animation {
+            0%{
+                border-top-color: rgb(255, 0, 0);
+                border-right-color: rgb(255, 230, 0);
+                border-bottom-color: rgb(81, 255, 0);
+                border-left-color: rgb(0, 255, 200);
+            }
+            
+            25%{
+                border-top-color: rgb(0, 255, 200);
+                border-right-color: rgb(255, 0, 0);
+                border-bottom-color: rgb(255, 230, 0);
+                border-left-color: rgb(81, 255, 0);
+            }
+            
+            50%{
+                border-top-color: rgb(81, 255, 0);
+                border-right-color: rgb(0, 255, 200);
+                border-bottom-color: rgb(255, 0, 0);
+                border-left-color: rgb(255, 230, 0);
+            }
+            
+            75%{
+                border-top-color: rgb(255, 230, 0);
+                border-right-color: rgb(81, 255, 0);
+                border-bottom-color: rgb(0, 255, 200);
+                border-left-color: rgb(255, 0, 0);
+            }
+            
+            100%{
+                border-top-color: rgb(255, 0, 0);
+                border-right-color: rgb(255, 230, 0);
+                border-bottom-color: rgb(81, 255, 0);
+                border-left-color: rgb(0, 255, 200);
+            }
+        }
+
+        #user{
+            color: red;
+        }
+
+        #WifeName{
+            color: red;
+            animation: wife_animation 1s 5 linear;
+        }
+        @keyframes wife_animation {
+            0%{color: white;}
+            50%{color:red;}
+            100%{color: white;}
+        }
+
+    </style>
+</head>
+<body>
+    <form id="myform" method="post">
+        <div id="content">
+            <h1>Let you Know Your Wife Name</h1>
+            <p>
+                Enter your name : <br> <br>
+                <input type="text" id="name" autofocus/>
+                <button onclick="find()">Search</button>
+                <input type="submit" onclick="find()" onsubmit="find()" hidden>
+            </p>
+        </div>
+    </form>
+
+    <div id="loadingBg"></div>
+    <div id="loading"></div>
+
+    <div id="result">
+        <button onclick="home()">HOME</button>
+        <p>
+            Hello <span id="user"></span>!
+        </p>
+        <p>
+            Thanks for using YoN - Find My Wife website
+        </p>
+        <p id="noWife" style="display: none;"></p>
+        <p id="haveWife" style="display: none;">
+            Your wife name is <span id="WifeName"></span>
+        </p>
+    </div>
+
+    <script>
+        var yon = ["yogesh","Yogesh","YOGESH","YON","Yon","YoN","yon"]
+        var arul = ["Arul","arul","Arularasu","arularasu"];
+        var max = ["max","Max","msf","MSF","maxmilan","Maxmilan","Maxmilan selvan fernando","Maxmilan Selvan Fernando","maxmilan selvan fernando"];
+        var sid = ["siranjeevi","Siranjeevi","Sid","sid"];
+        var ak = ["kathiravan","Kathiravan","ak","AK","Ak"];
+        var praveen = ["praveen","Praveen"];
+        var shyam = ["shyam","Shyam","sivaramakrishnan","Sivaramakrishnan"];
+        var kalai = ["kalai selvan","Kalai selvan","Kalai Selvan","kalaiselvan","Kalaiselvan","kalai","Kalai"];
+        var tamil = ["tamil selvan","Tamil selvan","Tamil Selvan","tamilselvan","Tamilselvan","tamil","Tamil"];
+        var akash = ["akash","Akash","akash krishna","Akash Krishna","AkashKrishna","Akashkrishna"];
+        var narayanan = ["sathyanarayanan","Sathyanarayanan","Sathya narayanan","Sathya Narayanan","narayanan","Narayanan"];
+        var agilan = ["agilan","Agilan"];
+        var jothi = ["Aruljothi","aruljothi","Arul jothi","Arul Jothi"];
+
+        var form = document.getElementById("myform");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            find()
+        })
+
+        function find(){
+            name = document.getElementById("name").value;
+            document.getElementById("loadingBg").style.display = "block";
+            document.getElementById("loading").style.display = "block";
+            setTimeout(AfterLoading,2000);
+        }
+        
+        function AfterLoading(){
+            document.getElementById("loadingBg").style.display = "none";
+            document.getElementById("loading").style.display = "none";
+
+            if (yon.indexOf(name) !== -1){
+                content();
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Nikalyaa";
+            }
+
+            else if(arul.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You have multiple lovers. <p>Currently,</p>";
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Rithu";
+            }
+
+            else if(max.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You doesn't have any Lover";
+            }
+
+            else if(sid.indexOf(name) !== -1) {
+                content();
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Jayashree";
+            }
+
+            else if(ak.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You have multiple lovers. <p>Currently,</p>";
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Anupriya";
+            }
+
+            else if(praveen.indexOf(name) !== -1) {
+                content();
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Nivetha";
+            }
+
+            else if(shyam.indexOf(name) !== -1) {
+                content();
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Akila";
+            }
+
+            else if(kalai.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You doesn't register your lover name";
+            }
+
+            else if(tamil.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, Your lover name was not registered. <p>But we considered, </p>";
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Dice";
+            }
+
+            else if(akash.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You doesn't register your lover name";
+            }
+
+            else if(narayanan.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You doesn't register your lover name";
+            }
+
+            else if(agilan.indexOf(name) !== -1) {
+                content();
+                document.getElementById("haveWife").style.display = "block";
+                document.getElementById("WifeName").innerHTML = "Lavanya";
+            }
+
+            else if(jothi.indexOf(name) !== -1) {
+                content();
+                document.getElementById("noWife").style.display = "block";
+                document.getElementById("noWife").innerHTML = "As per the database of 360 World, You doesn't register your lover name. <p>But we found that you have multiple lovers and you have met with multiple breakups. </p>";
+            }
+            
+            else{
+                alert("You may not be registered in 360 SQUAD\nOrElse you may entered a wrong name")
+            }
+        }
+        
+        function content(){
+            document.getElementById("content").style.display = "none";
+            document.getElementById("result").style.display = "block";
+            document.getElementById("user").innerHTML = name;
+        }
+
+        function home(){
+            window.location.reload();
+        }
+        
+    </script>
+</body>
+</html>

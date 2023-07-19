@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HACKING
+        </title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                background-color: black;
+            }
+
+            button{
+                background-color: gray;
+                color: red;
+                width: 180px;
+                height: 45px;
+                font-size: 24px;
+            }
+            button:active,button:hover,button:focus{
+                background-color: gray;
+                color: red;
+                width: 200px;
+                height: 50px;
+                font-size: 26px;
+            }
+
+            #process-div{
+                color: green;
+                display: none;
+                cursor: progress;
+            }
+
+            #processing-div{
+                color: red;
+            }
+
+            p{
+                display: none;
+            }
+
+            h3{
+                position: relative;
+                top: auto;
+                left: 20px;
+            }
+
+            #loading{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-top: 3px solid blue;
+                border-radius: 50%;
+                animation: loading 1s linear infinite;
+            }@keyframes loading {
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btn-div">
+            <button onclick="hack()">HACK NOW</button>
+        </div>
+        <div id="process-div">
+            <div id="loading"></div>
+            <h3>Hacking in process</h3>
+        </div>
+        <div id="processing-div">
+            <p id="0%process">0% of hacking process has completed...</p>
+            <p id="25%process">25% of hacking process has completed...</p>
+            <p id="50%process">50% of hacking process has completed...</p>
+            <p id="75%process">75% of hacking process has completed...</p>
+            <p id="100%process">100% of hacking process has completed...</p>
+            <p id="process-completed" style="color: green;">Hacking process has completed...</p>
+        </div>
+        <div id="result-div"></div>
+        <script>
+            function hack(){
+                document.getElementById("process-div").style.display = "block";
+                setTimeout(time0,500);
+                setTimeout(time25,1500);
+                setTimeout(time50,2500);
+                setTimeout(time75,3500);
+                setTimeout(time100,4500);
+                setTimeout(timec,4800);
+                setTimeout(hideload,4700);
+                setTimeout(alert,5000);
+            }
+            function time0(){
+                document.getElementById("0%process").style.display = "block";
+            }
+            function time25(){
+                document.getElementById("25%process").style.display = "block";
+            }
+            function time50(){
+                document.getElementById("50%process").style.display = "block";
+            }
+            function time75(){
+                document.getElementById("75%process").style.display = "block";
+            }
+            function time100(){
+                document.getElementById("100%process").style.display = "block";
+            }
+            function timec(){
+                document.getElementById("process-completed").style.display = "block";
+            }
+            function hideload(){
+                document.getElementById("process-div").style.display = "none";
+            }
+            function alert(){
+                alert("NOW YOUR WAS HACKED!");
+            }
+        </script>
+    </body>
+</html>

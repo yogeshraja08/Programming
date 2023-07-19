@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            navigation bar using table
+        </title>
+        <style>
+            #head1{
+                color:red;
+                font-size:5rem;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            #p1{
+                color: green;
+                text-decoration: underline overline;
+                text-transform:capitalize;
+                text-align: center;
+                font-family:'Times New Roman',monospace;
+                font-size:150%
+            }
+
+            #p2
+            {
+                font-size:2em;
+                color: brown;
+                font-weight:bold;
+                font-style:italic;
+                text-align: justify;
+                line-height:2;
+            }
+
+
+
+            #a1
+            {
+                text-decoration: none;
+                font-style: oblique;
+                text-transform: lowercase;
+                color:red;
+            }
+
+            mark
+            {
+                background-color:#00FF00;
+            }
+
+            body
+            {
+                background-color:#CCFFFF;
+            }
+
+            ul
+            {
+                color: #05ebff;
+            }
+
+            fieldset
+            {
+                background-color:#e60080;
+            }
+
+            legend
+            {
+                background-color:  #f536cf;
+            }
+			legend::first-letter{
+				font-size: larger;
+			}
+
+            marquee
+            {
+                background-color: #e0145c;
+            }
+
+            #linkforppt
+            {
+                text-decoration:none;
+                color: yellow;
+            }
+
+            #mark2
+            {
+                background-color:#00ffbf;
+            }
+
+         /*---------------------------------------------------------------*/
+
+            #navbar{
+                width: 100%;
+                height: 30px;
+                text-align: center;
+                background-color:rgb(48, 46, 46);
+                position: fixed;
+                top: 2px;
+                left: 0px;
+            }
+
+            .a-main{
+                background-color: gray;
+                color: lavender;
+                padding: 6px;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-shadow: 5px;
+            }
+            .a-main:hover,.a-main:focus,.a-main:active{
+                background-color: rgb(87, 82, 82);
+                color: white;
+				border-bottom: 3px solid rgb(100, 100, 231);
+            }
+
+			#sub-navbar{
+				width: 100%;
+				text-align:left;
+				position: fixed;
+				top: 30px;
+				left: 0px;
+			}
+
+			.a-sub{
+				color: wheat;
+				padding: 5px;
+				text-decoration: none;
+				text-transform: capitalize;
+				text-shadow: 2.5px;
+			}
+			.a-sub:hover,.a-sub:focus,.a-sub:active{
+				background-color: rgb(34, 31, 31);
+				color: whitesmoke;
+				border-left: 2px ridge blue;
+			}
+
+			.sub-navbar{
+				background-color: rgba(87, 82, 82, 0.76);
+				visibility: hidden;
+			}
+
+
+        </style>
+    </head>
+    <body>
+        <table id="navbar">
+            <tr>
+                <td>
+                    <a class="a-main" onclick="home()" href="#">home</a>
+                </td>
+                <td>
+                    <a class="a-main" onclick="about()" href="#">about us</a>
+                </td>
+                <td>
+                    <a class="a-main" onclick="contact()" href="#">contact us</a>
+                </td>
+                <td>
+                    <a class="a-main" onclick="products()" href="#">our products</a>
+                </td>
+                <td>
+                    <a class="a-main" onclick="branches()" href="#">our branches</a>
+                </td>
+            </tr>
+		</table>
+		<table id="sub-navbar">
+			<tr>
+				<td class="sub-navbar" id="home" style="width: 15%;">
+					<table>
+						<tr>
+							<td>
+								<a class="a-sub" href="#">welcome page</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="a-sub" href="#">login page</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="a-sub" href="#">join our team</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td class="sub-navbar" id="about" style="width: 20%;"></td>
+				<td class="sub-navbar" id="contact" style="width: 20%;"></td>
+				<td class="sub-navbar" id="products" style="width: 25%;">
+					<table>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">electrical items</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">mobile phones</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">search products</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td class="sub-navbar" id="branches" style="width: 20%;">
+					<table>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">India branch</a> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">USA branch</a> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">US branch</a> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#" class="a-sub">Singapore branch</a> 
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+        <div id="content" onclick="content()">
+            <h1 id="head1" align="center">css	</h1>
+<p id="p1">welcome to CSS course</p>
+<p id="p2">I have started my <b>CSS</b> course on 30<sup>th</sup>may,2020</p>
+<a id="a1"  href="#" >clickAble Link With nO underline</a><br><br><br>
+<hr><marquee scrollamount="10"> THE ABOVE CONTENT IS FOR EXAMPLES</marquee><br><hr><br>
+<fieldset>	<legend>
+<h1 align="center">STEPS TO PRESENT CSS FILE</h1></legend>
+<ol>
+<p><li>To present css file <mark>style</mark>is used in head section</li></p>
+<p><li>It is represented by the below statment</li></p>
+<p><li>tag name(eg.~p,a,h1,etc.)and use flower bracket{},then inside it properties with value are given like mentioned below</li></p>
+<mark>tag, any other tags<br>
+{<br>
+property-ies: value (space) any other value;<br>
+}</mark><br><br>
+<table bordercolor="black" border=3>
+<tr><td>
+<big>eg:</big><br>
+<mark id="mark2">
+&LeftAngleBracket;head&RightAngleBracket;<br>
+&LeftAngleBracket;style&RightAngleBracket;<br>
+#p1, marquee<br>
+{<br>
+color:red;<br>
+text-align:center;<br>
+border:2px red solid;<br>
+}<br>
+&LeftAngleBracket;/style&RightAngleBracket;<br>
+&LeftAngleBracket;/head&RightAngleBracket;<br>
+</mark></td></tr>
+</table>
+</ol>
+<br>
+<hr>
+<marquee><big>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</big></marquee>
+<hr>
+<br>
+<h1>properties and values</h1>
+<table border=3 bgcolor="b2db4c">
+	<tr bgcolor="#00f5cc">
+		<th>formatting</th>
+		<th>properties</th>
+		<th>values</th>
+		<th>example</th>
+	</tr>
+	<tr bgcolor="#ff4000">
+		<td>text color</td>
+		<td>color</td>
+		<td>color name</td>
+		<td>p<br>
+			{<br>
+			color:red;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#ffbf00">
+		<td>text alignment</td>
+		<td>text-align</td>
+		<td>center,left, right, justify</td>
+		<td>p<br>
+			{<br>
+			text-align: right;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#ffff00">
+		<td>font type</td>
+		<td>font-family</td>
+		<td>font name</td>
+		<td>p<br>
+			{<br>
+			font-family:"Times New Roman";<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#bfff00">
+		<td>font style</td>
+		<td>font-style</td>
+		<td>normal,italic</td>
+		<td>p<br>
+			{<br>
+			font-style<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#80ff00">
+		<td>font bolding</td>
+		<td>font-weight</td>
+		<td>normal, bold</td>
+		<td>p<br>
+			{<br>
+			font-weight:bold;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#00ff40">
+		<td>font size</td>
+		<td>font-size</td>
+		<td>size in pixels(px), percentage(%),rem,em</td>
+		<td>p<br>
+			{<br>
+			font-size:0.8em<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#00ffbf">
+		<td>background color</td>
+		<td>background-color</td>
+		<td>color name</td>
+		<td>p<br>
+			{<br>
+			background-color:pink;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#00bfff">
+		<td>border color</td>
+		<td>border</td>
+		<td>border_thickness (space) border_style (space) border_color_name</td>
+		<td>p<br>
+			{<br>
+			border:2rem solid red <br>
+			}</td>
+	</tr>
+	<tr bgcolor="#0040ff">
+		<td bgcolor="blue" rowspan=3>background image</td>
+		<td>background-image</td>
+		<td>URL </td>
+		<td>body<br>
+			{<br>
+			background-image: flowers.jpg ;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#8000ff">
+		<td>background-repeat</td>
+		<td>norepeat</td>
+		<td>body<br>
+			{<br>
+			background-repeat: norepeat;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#ff00ff">
+		<td>background-position</td>
+		<td>direction</td>
+		<td>body<br>
+			{<br>
+			background-position: right;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#ff0080">
+		<td>paragraph margin</td>
+		<td>margin-top<br>margin-bottom<br>
+			margin-left<br>margin-right</td>
+		<td>margin size in pixels</td>
+		<td>body<br>
+			{<br>
+			margin-top:25px;<br>
+			margin-left:50px;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="ff9647">
+		<td>case level</td>
+		<td>text-transform</td>
+		<td>capitalize, uppercase, lowercase</td>
+		<td>p<br>
+			{<br>
+			text-transform: capitalize;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="#706652">
+		<td>text with line</td>
+		<td>text-decoration</td>
+		<td>underline,overline,none</td>
+		<td>a<br>
+			{<br>
+			text-decoration:none;<br>
+			}</td>
+	</tr>
+	<tr bgcolor="660066">
+		<td>spacing</td>
+		<td>line-height, word-spacing, letter-spacing, text-indent</td>
+		<td>values in px,%,rem,em</td>
+		<td>div<br>
+			{<br>
+			line-height:1.8px;<br>
+			word-spacing:125%;<br>
+			text-indent:0.8em;<br>m
+			}</td>
+	</tr>
+	<tr bgcolor="FF99CC" >
+		<td>pseudoletter</td>
+		<td>double colon at tag name(::)</td>
+		<td>first-letter,first-word,first-line</td>
+		<td>div:: first-letter<br>
+			{<br>
+			text-size:20px;<br>
+			}</td>
+	</tr>
+	<tr bgcolor=" #cc0000">
+		<th colspan=4><big>NOTE:</big> HTML supports nearly 140 color names</th>
+	</tr>
+</table>
+</fieldset>
+		</div>
+		<script>
+			function home(){
+				document.getElementById("home").style.visibility = "visible";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "hidden";
+				document.getElementById("branches").style.visibility = "hidden";
+			}
+
+			function about(){
+				document.getElementById("home").style.visibility = "hidden";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "hidden";
+				document.getElementById("branches").style.visibility = "hidden";
+			}
+
+			function contact(){
+				document.getElementById("home").style.visibility = "hidden";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "hidden";
+				document.getElementById("branches").style.visibility = "hidden";
+			}
+
+			function products(){
+				document.getElementById("home").style.visibility = "hidden";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "visible";
+				document.getElementById("branches").style.visibility = "hidden";
+			}
+
+			function branches(){
+				document.getElementById("home").style.visibility = "hidden";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "hidden";
+				document.getElementById("branches").style.visibility = "visible";
+			}
+
+			function content(){
+				document.getElementById("home").style.visibility = "hidden";
+				document.getElementById("about").style.visibility = "hidden";
+				document.getElementById("contact").style.visibility = "hidden";
+				document.getElementById("products").style.visibility = "hidden";
+				document.getElementById("branches").style.visibility = "hidden";
+			}
+		</script>
+    </body>
+</html>

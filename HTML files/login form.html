@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            login form
+        </title>
+        <style>
+            table{
+                background-color: gray;
+                border-radius: 10px;
+                width: 25%;
+                height: auto;
+                text-align: center;
+                position: absolute;
+                left: 40%;
+            }
+
+            td{
+                width: 40%;
+                height: auto;
+                font-size: 25px;
+                transition: all 1s;
+            }
+            td:hover,td:focus,td:active{
+                background-color: rgba(32, 27, 27, 0.877);
+                color: rgba(162, 230, 27, 0.712);
+                border-radius: 10px;
+                border-bottom: 2px ridge skyblue;
+            }
+
+            td a{
+                color: yellowgreen;
+                text-decoration: none;
+                transition: all 500ms;
+            }
+            
+            td a:hover,td a:active{
+                color: rgba(162, 230, 27, 0.712);
+                
+            }
+
+            legend{
+                text-align: center;
+                font-size: 30px;
+            }
+
+            sup{
+                color: red;
+            }
+
+            form{
+                border: 2px ridge skyblue;
+                background-color: tan;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .btn{
+                font-size: 18px;
+            }
+            .btn:hover,.btn:focus{
+                font-size: larger;
+            }
+            
+            .change-form{
+                text-decoration: none;
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>FORM</legend>
+            <table>
+                <tr>
+                    <td onclick="login_swt()"><a href="#" class="change-swt">login</a></td>
+                    <td onclick="signup_swt()"><a href="#" class="change-swt">sign up</a></td>
+                </tr>
+            </table>
+            <br>
+            <form id="login-form">
+                <p>E-mail:<input type="email" id="email-login" name="email-login"/><br></p>
+                <p>Username:<input type="text" id="name-login" name="name-login"/><br></p>
+                <p>Password: <input type="password" id="password" name="password-login"/><br></p>
+                <p><button class="btn" onclick="btn_login()">submit</button><br></p>
+                <p><input type="reset" value="clear data" class="btn"/><br></p>
+                <p><a href="#" class="change-form" onclick="signup_swt()">Don't have an account yet? Signup here</a></p>
+            </form>
+            <form id="signup-form" style="display: none;">
+                <p><sup>*</sup>Username:<input type="text" id="name-signup" name="name-signup"><br></p>
+                <p><sup>*</sup>E-mail:<input type="email" id="email-signup" name="email-signup"><br></p>
+                <p><sup>*</sup>Password:<input type="password" id="password-signup" name="password-signup"><br></p>
+                <p><sup>*</sup>Confirm Password:<input type="password" id="cpassword-signup" name="cpassword-signup"><br></p>
+                <p><button class="btn" onclick="btn_signup()"><a href="https://zr662l5hvdvdpa2rpbeyyg-on.drv.tw/html%20files/additional%20files/signup%20form%20redirect.html">submit</a></button><br></p>
+                <p><input type="reset" value="clear data" class="btn"/><br></p>
+                <p><a href="#" class="change-form" onclick="login_swt()">Already hava an account? Login here</a></p>
+            </form>
+        </fieldset>
+        
+        <script>
+            function login_swt(){
+                document.getElementById("login-form").style.display = "block";
+                document.getElementById("signup-form").style.display = "none";
+            }
+
+            function signup_swt(){
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("signup-form").style.display = "block";
+            }
+            
+            function btn_login(){
+                var email_login = document.getElementById("email-login").value;
+                alert("your were successfully login as "+email_login);
+            }
+
+            function btn_signup(){
+                var email_signup = document.getElementById("email-signup").value;
+                alert("your were successfully sign-in as "+email_signup);
+            }
+        </script>
+    </body>
+</html>

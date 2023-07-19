@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            question paper
+        </title>
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.5">
+        <style>
+            body{
+                min-width: 880px;
+            }
+            /*--------------------------------------------------*/
+            #heading{
+                text-transform: uppercase;
+                width: 100%;
+                background-color: beige;
+                color: rgba(41, 37, 37, 0.699);
+            }
+            #gk{
+                width: 50%;
+                text-align: right;
+            }
+            /*--------------------------------------------------*/
+            #questions{
+                background-color: bisque;
+                color: rgba(32, 24, 24, 0.959);
+                font-size: 20px;
+            }
+            label:hover{
+                font-size: 23px;
+                border-bottom: 1px dashed black;
+            }
+            i{
+                background-color: rgba(128, 255, 0, 0.863);
+                font-size: 23px;
+                border-bottom: 1px ridge chocolate;
+            }
+            /*----------------------------------------------------------------*/
+            #loading{
+                width:200px;
+                height:200px;
+                border-top: 10px solid rgba(82, 136, 197, 0.74);
+                border-radius: 50%;
+                position: fixed;
+                left: 40%;
+                top: 40%;
+                display: none;
+                animation: load 0.5s linear infinite;
+            }@keyframes load{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+            }
+
+            #loading-background{
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: rgba(0, 0, 0, 0.700);
+                display: none;
+            }
+
+            #check{
+                display: none;
+            }
+
+            button{
+                width: 150px;
+                height: auto;
+                background-color: teal;
+                color: red;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+            button:hover,button:active,button:focus{
+                width: 160px;
+                height: auto;
+                background-color: teal;
+                color: red;
+                font-size: larger;
+                border-radius: 10px;
+                box-shadow: 4px 4px 0px 0px rgb(12, 12, 12);
+                transition: all 0.5s;
+            }
+
+            #result{
+                border: 1px double black;
+                background-color: grey;
+                display: none;
+            }
+
+            a{
+                color: red;
+                text-decoration: none;
+                font-size: larger;
+            }
+
+            #timer{
+                background-color: black;
+                color: red;
+                padding: 5px;
+            }
+            #reducer{
+                background-color:skyblue;
+                width: 0%;
+                animation: timer 180s linear 1;
+            }@keyframes timer{
+                from{width: 100%;}
+                to{width: 0%;}
+            }
+
+            .time-left{
+                display: none;
+                color: orangered;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="heading">
+            <center><h1>coding school</h1></center>
+            <table>
+                <tr>
+                    <td>date:<p id="date"></p></td>
+                    <td id="gk">subject:g.k.</td>
+                </tr>
+            </table>
+        </div>
+        <div id="timer">TIME LEFT:
+            <div id="reducer"><br></div>
+            <div class="time-left" id="time75%">75% of time left</div>
+            <div class="time-left" id="time50%">50% of time left</div>
+            <div class="time-left" id="time25%">25% of time left</div>
+            <div class="time-left" id="time0%">0% of time left</div>
+        </div>
+        <div id="questions">
+            <ol>
+                <li>
+                    Ant walks with its <i id="q1"></i>.<br>
+                        <input type="radio" id="q1o0" value="none selected" name="q1" onclick="q1o0()" checked><label for="q1o0">select your answer</label><br>
+                        <input type="radio" id="q1o1" value="legs" name="q1" onclick="q1o1()"><label for="q1o1">legs</label><br>
+                        <input type="radio" id="q1o2" value="antena" name="q1" onclick="q1o2()"><label for="q1o2">antena</label><br>
+                        <input type="radio" id="q1o3" value="needle" name="q1" onclick="q1o3()"><label for="q1o3">needle</label><br>
+                </li>
+                <br><hr><br>
+                <li>
+                    Children likes to <i id="q2"></i>.<br>
+                        <input type="radio" id="q2o0" value="none selected" name="q2" onclick="q2o0()" checked><label for="q2o0">select your answer</label><br>
+                        <input type="radio" id="q2o1" value="eat" name="q2" onclick="q2o1()"><label for="q2o1">eat</label><br>
+                        <input type="radio" id="q2o2" value="sleep" name="q2" onclick="q2o2()"><label for="q2o2">sleep</label><br>
+                        <input type="radio" id="q2o3" value="play" name="q2" onclick="q2o3()"><label for="q2o3">play</label>
+                </li>
+                <br><hr><br>
+                <li>
+                    <span title="To know more about lungfish click it"><a href="https://www.britannica.com/animal/lungfish">Lungfish</a></span> lived near a <i id="q3"></i>.<br>
+                        <input type="radio" id="q3o0" value="none selected" name="q3" onclick="q3o0()" checked><label for="q3o0">select your answer</label><br>
+                        <input type="radio" id="q3o1" value="lake" name="q3" onclick="q3o1()"><label for="q3o1">lake</label><br>
+                        <input type="radio" id="q3o2" value="pond" name="q3" onclick="q3o2()"><label for="q3o2">pond</label><br>
+                        <input type="radio" id="q3o3" value="sea" name="q3" onclick="q3o3()"><label for="q3o3">sea</label>
+                </li>
+            </ol>
+            <button onclick="submit()">submit</button><br><br>
+            <button onclick="check()" id="check">check your answer</button><br><br>
+        </div>
+        <div id="loading-background"></div>
+        <div id="loading"></div>
+        <!-- IT'S A YON EDITING CLUB PRODUCTION -->
+        <!-- @just_call_me_as_yon -->
+        <div id="result">
+            <ol>
+                <li>Your answer: <i id="r1"></i> | Correct answer: Legs</li>
+                <li>Your answer: <i id="r2"></i> | Correct answer: Play</li>
+                <li>Your answer: <i id="r3"></i> | Correct answer: Pond</li>
+            </ol>
+            <h4>NOTE: Take a screenshot of this page and send it via e-mail or whatsapp.</h4>
+            <a href="mailto:rajaryogesivar@gmail.com">click here to send by mail</a> || <a href="https://wa.me/+918667370445">click here to send by whatsapp</a>
+        </div>
+
+        <!--------------------------------------------------------------------->
+        <script>
+            var date = new Date();
+            document.getElementById("date").innerHTML = date;
+            //-------------------------------------------------------------------
+            function q1o0(){
+                var q1o0 = document.getElementById("q1o0").value;
+                document.getElementById("q1").innerHTML = q1o0;
+                document.getElementById("r1").innerHTML = q1o0;
+                alert(" atleast select any one of the value");
+            }
+
+            function q1o1(){
+                var q1o1 = document.getElementById("q1o1").value;
+                document.getElementById("q1").innerHTML = q1o1;
+                document.getElementById("r1").innerHTML = q1o1;
+            }
+
+            function q1o2(){
+                var q1o2 = document.getElementById("q1o2").value;
+                document.getElementById("q1").innerHTML = q1o2;
+                document.getElementById("r1").innerHTML = q1o2;
+            }
+
+            function q1o3(){
+                var q1o3 = document.getElementById("q1o3").value;
+                document.getElementById("q1").innerHTML = q1o3;
+                document.getElementById("r1").innerHTML = q1o3;
+            }
+
+            function q2o0(){
+                var q2o0 = document.getElementById("q2o0").value;
+                document.getElementById("q2").innerHTML = q2o0;
+                document.getElementById("r2").innerHTML = q2o0;
+                alert(" atleast select any one of the value");
+            }
+
+            function q2o1(){
+                var q2o1 = document.getElementById("q2o1").value;
+                document.getElementById("q2").innerHTML = q2o1;
+                document.getElementById("r2").innerHTML = q2o1;
+            }
+
+            function q2o2(){
+                var q2o2 = document.getElementById("q2o2").value;
+                document.getElementById("q2").innerHTML = q2o2;
+                document.getElementById("r2").innerHTML = q2o2;
+            }
+
+            function q2o3(){
+                var q2o3 = document.getElementById("q2o3").value;
+                document.getElementById("q2").innerHTML = q2o3;
+                document.getElementById("r2").innerHTML = q2o3;
+            }
+
+            function q3o0(){
+                var q3o0 = document.getElementById("q3o0").value;
+                document.getElementById("q3").innerHTML = q3o0;
+                document.getElementById("r3").innerHTML = q3o0;
+                alert(" atleast select any one of the value");
+            }
+
+            function q3o1(){
+                var q3o1 = document.getElementById("q3o1").value;
+                document.getElementById("q3").innerHTML = q3o1;
+                document.getElementById("r3").innerHTML = q3o1;
+            }
+
+            function q3o2(){
+                var q3o2 = document.getElementById("q3o2").value;
+                document.getElementById("q3").innerHTML = q3o2;
+                document.getElementById("r3").innerHTML = q3o2;
+            }
+
+            function q3o3(){
+                var q3o3 = document.getElementById("q3o3").value;
+                document.getElementById("q3").innerHTML = q3o3;
+                document.getElementById("r3").innerHTML = q3o3;
+            }
+            
+            function submit(){
+                document.getElementById("loading").style.display = "block";
+                document.getElementById("loading-background").style.display = "block";
+                setTimeout(process,2000);
+            }
+            function process(){
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("loading-background").style.display = "none";
+                document.getElementById("check").style.display = "block";
+                document.getElementById("timer").style.display = "none";
+            }
+
+            function check(){
+                document.getElementById("result").style.display = "block";
+                document.getElementById("questions").style.display = "none";
+                document.getElementById("timer").style.display = "none";
+            }
+
+            var timer75 = document.getElementById("time75%");
+            var timer50 = document.getElementById("time50%");
+            var timer25 = document.getElementById("time25%");
+            var timer0  = document.getElementById("time0%");
+            setTimeout(t0,180000);
+            setTimeout(t25,135000);
+            setTimeout(t50,90000);
+            setTimeout(t75,45000);
+            function t0(){
+                timer75.style.display = "none";
+                timer50.style.display = "none";
+                timer25.style.display = "none";
+                timer0.style.display = "block";
+                document.getElementById("loading").style.display = "block";
+                document.getElementById("loading-background").style.display = "block";
+                setTimeout(process_timeout,3000);
+            }
+            function process_timeout(){
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("loading-background").style.display = "none";
+                document.getElementById("result").style.display = "block";
+                document.getElementById("questions").style.display = "none";
+                document.getElementById("timer").style.display = "none";
+            }
+            function t25(){
+                timer75.style.display = "none";
+                timer50.style.display = "none";
+                timer25.style.display = "block";
+                timer0.style.display = "none";
+            }
+            function t50(){
+                timer75.style.display = "none";
+                timer50.style.display = "block";
+                timer25.style.display = "none";
+                timer0.style.display = "none";
+            }
+            function t75(){
+                timer75.style.display = "block";
+                timer50.style.display = "none";
+                timer25.style.display = "none";
+                timer0.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

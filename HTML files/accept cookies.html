@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            accepting cookies
+        </title>
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=0.5"/>
+        <style>
+            *{
+                background-color: cadetblue;
+                margin: auto;
+                padding: 5px;
+            }
+             
+            /* code for changing color at size variable ------------------*/
+            #content{
+                background-color: cornflowerblue;
+                font-size: 24px;
+            }
+            @media screen and (min-width:500px) {
+                #content{background-color: rgb(236, 12, 199);}
+            }
+            @media screen and (min-width:600px) {
+                #content{background-color: rgb(195, 14, 240);}
+            }
+            @media screen and (min-width:700px) {
+                #content{background-color: rgb(53, 56, 206);}
+            }
+            /*-------------------------------------------------------------*/
+
+            #popup,table,tr,td,button{
+                background-color: coral;
+                text-align: center;
+            }
+
+            #popup{
+                font-size: 20px;
+                width: 100%;
+                height: 90x;
+                position: fixed;
+                bottom: 0px;
+                left: auto;
+                right: auto;
+                border: 1px ridge coral;
+                border-radius: 10px;
+            }
+
+            button{
+                background-color: darkcyan;
+                border-radius: 10px;
+                cursor:grab;
+                transition: all 1s ;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color: darkcyan;
+                border-radius: 10px;
+                cursor:grab;
+                width: 100px;
+                height: 30px;
+                box-shadow: 1px 1px 4px 5px goldenrod;
+                font-weight: bold;
+            }
+            button:focus{
+                background-color: darkcyan;
+                border-radius: 10px;
+                cursor:grab;
+                width: 100px;
+                height: 30px;
+                font-weight: bold;
+            }
+
+            #close{
+                cursor: grab;
+                font-weight: bolder;
+                animation: close 0.5s linear infinite;
+            }@keyframes close {
+                form{background-color: coral;}
+                to{background-color: red;}
+            }
+            #close:focus,#close:hover{
+                background-color: red;
+                color: white;
+                box-shadow: 1px 1px 2px 3px red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            TOTAL HTML COURSE
+I have learnt all HTML course.
+I have started the html course on my 8thstudies.
+I have finished my html course after completing 12th in 28thmay,2020.
+audio ~ only audio format but any types of audio format | url should pasted in srcif one format , source src if multiple format
+video ~ only video but any types of video formats | url should pasted in srcif one format , source src if multiple format
+embed ~ videos or audio with frame can be used | url should pasted only in src<br>
+ 
+back to top
+iframe~ videos or audio can be used
+src(URL)
+controls(no elements){deprecated attribute}
+allow(fullscreen, accelerometer, gyroscopic)
+
+table~ set table in webpage
+The attributes of table are
+
+cellpading
+cellspacing
+border
+bordercolor
+align
+bgcolor
+height
+width
+It has four section
+
+captain
+- gives the title of table
+thead
+- decide the top of table
+tbody
+- decide the middle part of table
+tfoot
+- decide the bottom of table
+The tags in table are
+<br>
+tr
+~ table row
+th
+~ table heading
+td
+~ table data
+The attributes of tr,th,td are
+
+align
+valign
+width
+bgcolor
+background
+rowspan
+colspan
+eg. for above table information
+
+eg. for table
+-top-	-words-
+-content-	-words-
+-rowspan-	-data-
+-data-
+-colspan-
+-bottom-	-words-
+
+a~ link is pasted | href is used
+clickable word
+img~ used to set images
+attributes of img are
+<br>
+src
+alt
+vspace
+hspace
+align
+
+figure~ only image URL is pasted in src attribute .
+figcaption is used to set captions for image
+
+captain here
+link~ is used to set link to documents|file|website|email etc..
+marquee~ is used to scroll the text
+attributes of marquee are
+direction
+scrollamount
+scrolldelay
+vspace
+Hspace
+width
+height
+loop
+behaviour
+bgcolor
+
+back to top
+form~ is used to make forms in different types
+attributes used in form are
+
+type
+(specify the type of from to server)<br>
+name
+(specify the name of elements to server)
+value
+(specify the value of elements to user)
+required
+(specify that it is compulsory to fill)
+select
+(used to set drop-down box)
+label
+(used to select options on touch of lables word)
+
+type:
+There are many types attribute
+text
+number
+date
+email
+file
+week
+url
+radio
+("multiple" is used to select multiple options)
+checkbox
+("multiple" is used to select multiple options)
+reset
+submit
+
+back to form index 
+
+name:<br>
+any values can be given to name by coder to server
+back to form index 
+
+value:
+any values can be given to value by coder to user
+back to form index 
+
+required:
+only the word requiredis used,no other values are given
+back to form index
+
+select:
+option is used in "select" tag multiple times for multiple options
+name
+(name to server)
+value
+(name to user)
+id
+(name to coder)
+selected
+(used to select default)
+
+back to form index
+
+label
+label is used to label the tag. If we touch the labelled word in form ,it can be selected
+
+back to form index
+
+<br>
+back to top 
+
+EXAMPLE FOR FORM
+text: 
+word to user(text)
+
+number: 
+
+date: 
+dd-----yyyy
+
+week: 
+Week --, ----
+
+url: 
+word to user(url)
+
+email: 
+word to user(email)
+
+radio: option1  option2
+checkbox: option1 option2
+select: 
+select your option
+
+upload file: 
+reset everything: 
+submit form: 
+Script~ is used to set the popup box
+the format of Script is given below<br>
+‹Script type=text/javascript› ‹/script›
+
+Inside it the below mentioned details must contain
+var sname,age,no.=prompt("value to title of pop-up box","value of placeholder(default value) of pop-up box");
+
+eg.:
+var age=("please enter your age","0");
+
+
+if or else or elseif (value given at var < or > or = = value)
+
+eg.:
+if(age‹18)
+
+
+
+{
+alert is used to show alert by pop-up box or document.wtite is used to show message on webpage
+("message on alert pop-up box");
+}
+
+eg.:
+{
+alert("you were accepted");
+}
+
+back to top
+        </div>
+        <div id="popup">
+            <table>
+                <tr>
+                    <td>our website uses your third pirty cookies</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <button onclick="accept()">Accept</button>
+                        <button onclick="deny()">Deny</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+
+            function accept(){
+                document.getElementById("popup").style.display = "none";
+                alert("your cookies were allowed!");
+            }
+
+            function deny(){
+                document.getElementById("popup").style.display = "none";
+                alert("your cookies were denied!")
+            }
+        </script>
+    </body>
+</html>
