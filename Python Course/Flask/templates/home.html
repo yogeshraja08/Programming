@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoN Python Workspace</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>YoN Python Workspace</h1>
+    <h2 onclick="refresh()">User Mangement using Python Flask & MySQL </h2>
+    <script>
+        function refresh(){
+            location.reload()
+        }
+    </script>
+    <h4>
+        {% with messages = get_flashed_messages() %}
+            {% if messages  %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </h4>
+    <p>
+        <a href="{{url_for('addusers')}}">Add Users</a>
+    </p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>CITY</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+        {% for data in datas :%}
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.age}}</td>
+                <td>{{data.city}}</td>
+                <td><a href="{{url_for('editusers',id=data.id)}}">Edit</a></td>
+                <td><a onclick="return confirm('Are you sure to delete');" href="{{url_for('deleteusers',id=data.id)}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

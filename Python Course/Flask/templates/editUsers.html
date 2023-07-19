@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>YoN Python Workspace</h1>
+    <h2>Update User Details</h2>
+    <form action="" method="post">
+        <label for="name">NAME : </label><br>
+        <input type="text" name="name" id="name" value="{{datas.name}}" required>
+        <br>
+        <label for="age">AGE : </label><br>
+        <input type="number" name="age" id="age" value="{{datas.age}}" required>
+        <br>
+        <label for="city">CITY : </label><br>
+        <input type="text" name="city" id="city" value="{{datas.city}}" required>
+        <br>
+        <button type="reset">Clear Data</button>
+        <input type="submit" value="Update Details">
+    </form>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body{
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    animation: title 5s infinite;
+    padding: 7px;
+    border: 2px solid burlywood;
+}
+@keyframes title {
+    0%{color: white; font-weight: bold;}
+    50%{color: black; font-weight: bolder;}
+    100%{color: white; font-weight: bold;}
+}
+
+h2{
+    color: blueviolet;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+h2:hover{
+    color: rebeccapurple;
+}
+
+h4{
+    float: right;
+    color: brown;
+    margin: 1px;
+    animation: flashmsg 400ms 3;
+}
+@keyframes flashmsg {
+    0%{color: brown;}
+    50%{color: white;}
+    100%{color: brown;}
+}
+
+p a{
+    text-decoration: none;
+    color: red;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 500ms;
+    font-size: x-large;
+}
+p a:hover{
+    color: rgb(87, 2, 2);
+}
+
+table{
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    text-align: center;
+}
+table tr th{
+    border: 1px solid white;
+    padding: 12px;
+    color: darkturquoise;
+    background-color: blanchedalmond;
+}
+table tr td{
+    border: 1px solid burlywood;
+    padding: 10px;
+    color: darkolivegreen;
+    background-color: coral;
+}
+
+table tr td a{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: all 500ms;
+}
+table tr td a:hover{
+    color: rgb(145, 143, 143);
+    background-color: rgb(63, 1, 1);
+}
+
+form label{
+    font-size: larger;
+    padding-bottom: 10px;
+}
+
+form input{
+    width: 250px;
+    height: max-content;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+form input[type=submit],button{
+    width: max-content;
+    height: max-content;
+    border: 1px solid rgb(200, 0, 0);
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 100ms;
+}
+form input[type=submit]:hover,button:hover{
+    background-color: rgb(240, 0, 0);
+    color: beige;
+    box-shadow: 2px 2px 5px 2px inset rgb(200, 0, 0) ;
+}
