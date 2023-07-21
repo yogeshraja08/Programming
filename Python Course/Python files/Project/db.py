@@ -2,7 +2,59 @@ import sqlite3
 
 class database:
     def __init__(self,db):
-        self.con = sqlite3.connect(db)
+        self.con = 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        sqlite3.connect(db)
         self.cur = self.con.cursor()
         qry = """ 
             create table if not exists staff (
