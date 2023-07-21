@@ -104,26 +104,26 @@ public class Day3 {
         //     System.out.println("It is not a prime");
         // }
 
-            // condition for prime numbers -- method 2
-        System.out.print("Enter the starting number : ");
-        int a = input.nextInt();
-        System.out.print("Enter the ending number : ");
-        int b = input.nextInt();
-        int primesum = 0;
-        for(int j=a; j<=b; j++)
-        {   
-            int num = j;
-            int factor = 0;
-            for (int i=2; i<=num;i++){
-                if(num%i==0){
-                    factor++;
-                }
-            }
-            if (factor==1){
-                primesum+=j;
-            }
-        }
-        System.out.println(primesum);
+        //     // condition for prime numbers -- method 2
+        // System.out.print("Enter the starting number : ");
+        // int a = input.nextInt();
+        // System.out.print("Enter the ending number : ");
+        // int b = input.nextInt();
+        // int primesum = 0;
+        // for(int j=a; j<=b; j++)
+        // {   
+        //     int num = j;
+        //     int factor = 0;
+        //     for (int i=2; i<=num;i++){
+        //         if(num%i==0){
+        //             factor++;
+        //         }
+        //     }
+        //     if (factor==1){
+        //         primesum+=j;
+        //     }
+        // }
+        // System.out.println(primesum);
         
 
 
