@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Day5 {
     public static void main(String[] args) {
@@ -32,5 +33,39 @@ public class Day5 {
         // String a = "hi guru".trim();
         // Boolean b = a.startsWith("hi");
         // System.out.println(b);
+
+
+        // String name = "yogesh";
+        // for (int i = 0; i<name.length();i++){
+        //     char c = name.charAt(i);
+        //     System.out.println(c);
+        // }
+        
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the word : ");
+        String name = input.next();
+        // String rev = "";
+        // for(int i = name.length()-1;i>=0;i--){
+        //     rev+=name.charAt(i);
+        // }
+
+        // if(name.equals(rev)){
+        //     System.out.println("It is palindrome");
+        // }
+        // else{
+        //     System.out.println("It is not palindrome");
+        // }
+        
+        int count = 0;
+        for(int i=0; i<name.length();i++){
+            if (name.charAt(i) == 'a'){
+                count++;
+            }
+        }
+        System.out.println(count);
+        input.close();
+
+
     }
 }
