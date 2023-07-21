@@ -68,23 +68,23 @@ public class Day3 {
 
 
 
-        System.out.print("Enter start number : ");
-        int a = input.nextInt();
-        System.out.print("Enter end number : ");
-        int b = input.nextInt();
-        int sum=0, evenSum=0, oddSum=0;
-        for(int i = a;i<=b;i++){
-            if(i%2==0){
-                evenSum+=i;
-            }
-            else{
-                oddSum+=i;
-            }
-            sum+=i;
-        }
-        System.out.println("Sum of the total numbers is "+sum);
-        System.out.println("Sum of the even numbers is "+evenSum);
-        System.out.println("Sum of the odd numbers is "+oddSum);
+        // System.out.print("Enter start number : ");
+        // int a = input.nextInt();
+        // System.out.print("Enter end number : ");
+        // int b = input.nextInt();
+        // int sum=0, evenSum=0, oddSum=0;
+        // for(int i = a;i<=b;i++){
+        //     if(i%2==0){
+        //         evenSum+=i;
+        //     }
+        //     else{
+        //         oddSum+=i;
+        //     }
+        //     sum+=i;
+        // }
+        // System.out.println("Sum of the total numbers is "+sum);
+        // System.out.println("Sum of the even numbers is "+evenSum);
+        // System.out.println("Sum of the odd numbers is "+oddSum);
 
 
             // condition for prime numbers -- method 1
@@ -104,21 +104,26 @@ public class Day3 {
         //     System.out.println("It is not a prime");
         // }
 
-        //     // condition for prime numbers -- method 2
-        // System.out.print("Enter the number : ");
-        // int num = input.nextInt();
-        // int factor = 0;
-        // for (int i=2; i<=num;i++){
-        //     if(num%i==0){
-        //         factor++;
-        //     }
-        // }
-        // if (factor==1){
-        //     System.out.println(num+" is prime number.");
-        // }
-        // else{
-        //     System.out.println(num+" is not a prime number.");
-        // }
+            // condition for prime numbers -- method 2
+        System.out.print("Enter the starting number : ");
+        int a = input.nextInt();
+        System.out.print("Enter the ending number : ");
+        int b = input.nextInt();
+        int primesum = 0;
+        for(int j=a; j<=b; j++)
+        {   
+            int num = j;
+            int factor = 0;
+            for (int i=2; i<=num;i++){
+                if(num%i==0){
+                    factor++;
+                }
+            }
+            if (factor==1){
+                primesum+=j;
+            }
+        }
+        System.out.println(primesum);
         
 
 
