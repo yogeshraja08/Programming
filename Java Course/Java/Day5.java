@@ -42,9 +42,9 @@ public class Day5 {
         // }
         
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter the word : ");
-        String name = input.next();
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Enter the word : ");
+        // String name = input.next();
         // String rev = "";
         // for(int i = name.length()-1;i>=0;i--){
         //     rev+=name.charAt(i);
@@ -56,16 +56,66 @@ public class Day5 {
         // else{
         //     System.out.println("It is not palindrome");
         // }
-        
+
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Enter the word : ");
+        // String name1 = input.next();
+        // String name = name1.toLowerCase();
+        // int count = 0;
+        // for(int i=0; i<name.length();i++){
+        //     if (name.charAt(i) == 'a' || name.charAt(i) == 'e' || name.charAt(i) == 'i' || name.charAt(i) == 'o' || name.charAt(i) == 'u'){
+        //         count++;
+        //     }
+        // }
+        // System.out.println(count);
+        // input.close();
+
+
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Enter the number : ");
+        // int num = input.nextInt();
+        // int temp = num, digits=0, last=0, sum=0;
+        // while(temp>0){
+        //     temp = temp/10;   
+        //     digits++;   
+        // }   
+        // temp = num;   
+        // while(temp>0){    
+        //     last = temp % 10;   
+        //     sum += (Math.pow(last, digits));
+        //     temp = temp/10;
+        // }
+        // if (num == sum){
+        //     System.out.println("amstrong");
+        // }
+        // else{
+        //     System.out.println("not amstrong");
+        // }
+        // input.close();
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the word 1 : ");
+        String word1 = input.nextLine();
+        System.out.print("Enter the word 2 : ");
+        String word2 = input.nextLine();
         int count = 0;
-        for(int i=0; i<name.length();i++){
-            if (name.charAt(i) == 'a'){
-                count++;
+        if(word1.length() == word2.length()){
+            for(int i=0; i<word1.length(); i++){
+                for(int j=0; j<word2.length(); j++){
+                    if(word1.charAt(i) == word2.charAt(j)){
+                        count++;
+                        break;
+                    }
+                }
             }
         }
-        System.out.println(count);
+        if(count == word1.length()){
+            System.out.println("Anagram");
+        }
+        else{
+            System.out.println("not Anagram");
+        }
+        
         input.close();
-
-
     }
 }
