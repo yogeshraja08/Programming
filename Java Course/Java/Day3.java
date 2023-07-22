@@ -67,7 +67,7 @@ public class Day3 {
     // }
 
 
-
+        //  // even, odd
         // System.out.print("Enter start number : ");
         // int a = input.nextInt();
         // System.out.print("Enter end number : ");
@@ -87,7 +87,7 @@ public class Day3 {
         // System.out.println("Sum of the odd numbers is "+oddSum);
 
 
-            // condition for prime numbers -- method 1
+        //    // condition for prime numbers -- method 1
         // System.out.print("Enter the number : ");
         // int num = input.nextInt();
         // boolean check = false;
@@ -156,12 +156,6 @@ public class Day3 {
         //     n1 = n2;
         //     n2 = n3;
         // }
-
-
-
-
-
-
         input.close();
     }
 }

@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Day6 {
     public static void main(String[] args) {
+        // print last half as reverse
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number/word : ");
         String number = input.next();

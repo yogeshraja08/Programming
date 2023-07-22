@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Day5 {
     public static void main(String[] args) {
+        //  //  substring
         // String a = "yogesh raja";
         // System.out.println(a.indexOf('y'));
         // System.out.print(a.substring(0,1).toUpperCase());
@@ -11,8 +12,8 @@ public class Day5 {
         // System.out.print(a.substring(8).toLowerCase());
 
 
-        // StringBuffer - can append values
-        // String - cannot append values
+        //  // StringBuffer - can append values
+        //  // String - cannot append values
         // StringBuffer txt = new StringBuffer("yon");
         // String a = "yogesh";
         // System.out.println(txt.capacity());
@@ -41,7 +42,7 @@ public class Day5 {
         //     System.out.println(c);
         // }
         
-
+        // palindrome
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the word : "); //madam
         String name = input.next();
@@ -59,6 +60,7 @@ public class Day5 {
 
         input.close();
 
+        //  //  no. of vowels in given word
         // Scanner input = new Scanner(System.in);
         // System.out.print("Enter the word : ");
         // String name1 = input.next();
@@ -73,6 +75,7 @@ public class Day5 {
         // input.close();
 
 
+        //  //  amstrong number
         // Scanner input = new Scanner(System.in);
         // System.out.print("Enter the number : ");
         // int num = input.nextInt();
@@ -95,6 +98,8 @@ public class Day5 {
         // }
         // input.close();
 
+
+        //  //  anagram
         // Scanner input = new Scanner(System.in);
         // System.out.print("Enter the word 1 : ");
         // String word1 = input.nextLine();
