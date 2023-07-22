@@ -104,7 +104,25 @@ public class Day3 {
         //     System.out.println("It is not a prime");
         // }
 
-            // condition for prime numbers -- method 2
+        
+        //     // condition for prime -- method 2
+        // System.out.print("Enter the number : ");
+        // int number = input.nextInt();
+        // int factor = 0;
+        // for (int i=2; i<=number; i++){
+        //     if(number%i == 0){
+        //         factor++;
+        //     }
+        // }
+        // if(factor==1){
+        //     System.out.println("It is prime");
+        // }
+        // else{
+        //     System.out.println("It is not prime");
+
+        // }
+
+            // condition for sum of prime numbers
         System.out.print("Enter the starting number : ");
         int a = input.nextInt();
         System.out.print("Enter the ending number : ");
