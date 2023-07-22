@@ -1,4 +1,4 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Day5 {
     public static void main(String[] args) {
@@ -42,20 +42,22 @@ public class Day5 {
         // }
         
 
-        // Scanner input = new Scanner(System.in);
-        // System.out.print("Enter the word : ");
-        // String name = input.next();
-        // String rev = "";
-        // for(int i = name.length()-1;i>=0;i--){
-        //     rev+=name.charAt(i);
-        // }
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the word : "); //madam
+        String name = input.next();
+        String rev = "";
+        for(int i = name.length()-1;i>=0;i--){
+            rev+=name.charAt(i); //rev = rev + name.charAt(i); 
+        }
 
-        // if(name.equals(rev)){
-        //     System.out.println("It is palindrome");
-        // }
-        // else{
-        //     System.out.println("It is not palindrome");
-        // }
+        if(name.equals(rev)){
+            System.out.println("It is palindrome");
+        }
+        else{
+            System.out.println("It is not palindrome");
+        }
+
+        input.close();
 
         // Scanner input = new Scanner(System.in);
         // System.out.print("Enter the word : ");
