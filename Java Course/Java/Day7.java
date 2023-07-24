@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javafx.scene.transform.Scale;
+
 public class Day7 {
     public static void main(String[] args) {
         // Scanner input=new Scanner(System.in);
@@ -49,22 +51,43 @@ public class Day7 {
         // }
         // input.close();
 
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("Enter the size of array : ");
+        // int size = input.nextInt();
+        // int[] arr = new int[size];
+        // for (int i=0; i<size; i++){
+        //     System.out.print("Enter the val : ");
+        //     int val = input.nextInt();
+        //     arr[i]=val;
+        // }
+        // int sum = 0;
+        // for (int j=0; j<size; j++){
+        //     if (arr[j]%2 == 0){
+        //         sum += arr[j];
+        //     }
+        // }
+        // System.out.println(sum);
+        // input.close();
+
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the size of array : ");
         int size = input.nextInt();
         int[] arr = new int[size];
         for (int i=0; i<size; i++){
-            System.out.print("Enter the val : ");
+            System.out.print("Enter the value : ");
             int val = input.nextInt();
             arr[i]=val;
         }
-        int sum = 0;
+        int count=0;
         for (int j=0; j<size; j++){
-            if (arr[j]%2 == 0){
-                sum += arr[j];
+            for (int k=j+1; k<size; k++){
+                if(arr[j] == arr[k]){
+                    System.out.print(arr[k]+" ");
+                    count++;
+                }
             }
         }
-        System.out.println(sum);
+        System.out.println("\nTotal no. of duplicated numbers : "+count);
         input.close();
     }
 }
