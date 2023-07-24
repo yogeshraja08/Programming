@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javafx.scene.transform.Scale;
-
 public class Day7 {
     public static void main(String[] args) {
         // Scanner input=new Scanner(System.in);
