@@ -1,13 +1,16 @@
-// import java.util.*;
-// public class test {
-//     public static void main(String[] args) {
-//         Scanner input = new Scanner(System.in);
-//         System.out.print("Enetr the first value : ");
-//         String val1 = input.nextLine();
-//         System.out.print("Enetr the next value : ");
-//         String val2 = input.nextLine();
-
-//         System.out.println(val1+"\n"+val2);
-//         input.close();
-//     }
-// }
+import java.util.*;
+public class test {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the range : ");
+        int range = input.nextInt();
+        // int range = 10;
+        String str = "*";
+        String temp = " ";
+        for(int i=0; i<=range; i++){
+            System.out.println(str);
+            str = temp + str;
+        }
+        // input.close();
+    }
+}
