@@ -3,19 +3,19 @@ import java.util.Scanner;
 public class Day8 {
     public static void main(String[] args) {
         
-        // Scanner input = new Scanner(System.in);
-        // System.out.println("Getting values for matrix 1 ....");
-        // System.out.print("Enter the no. of rows : ");
-        // int row1 = input.nextInt();
-        // System.out.print("Enter the no. of columns : ");
-        // int col1 = input.nextInt();
-        // int[][] arr1 = new int[row1][col1];
-        // for (int i=0; i<row1; i++){
-        //     for (int j=0; j<col1; j++){
-        //         System.out.print("Enter the matrix - A"+i+j+" : ");
-        //         arr1[i][j] =  input.nextInt();
-        //     }
-        // }
+    //    Scanner input = new Scanner(System.in);
+    //     System.out.println("Getting values for matrix 1 ....");
+    //     System.out.print("Enter the no. of rows : ");
+    //     int row1 = input.nextInt();
+    //     System.out.print("Enter the no. of columns : ");
+    //     int col1 = input.nextInt();
+    //     int[][] arr1 = new int[row1][col1];
+    //     for (int i=0; i<row1; i++){
+    //         for (int j=0; j<col1; j++){
+    //             System.out.print("Enter the matrix - A"+i+j+" : ");
+    //             arr1[i][j] =  input.nextInt();
+    //         }
+    //     }
 
         // System.out.println("\nGetting values for matrix 2 ....");
         // System.out.print("Enter the no. of rows : ");

@@ -11,6 +11,6 @@ public class test {
             System.out.println(str);
             str = temp + str;
         }
-        // input.close();
+        input.close();
     }
 }
