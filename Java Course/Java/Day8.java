@@ -95,6 +95,7 @@ public class Day8 {
         // input.close();
 
 
+        // pattens
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the range : ");
         int range = input.nextInt();
