@@ -25,9 +25,6 @@
 //         }
 // }
 
-/**
- * Methods_Objects
- */
 public class Methods_Objects {
         void Basic(){
                 System.out.println("printing basic method");
