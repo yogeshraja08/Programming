@@ -12,3 +12,4 @@ print(arr[-1:])
 for i in range(len(arr)):
     if int(arr[i]) % 2 == 0:
         print(arr[i],end=" ")
+print(arr)
