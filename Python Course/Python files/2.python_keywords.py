@@ -1,3 +1,5 @@
 import keyword
 
-print(keyword.kwlist)
+a = keyword.kwlist
+print(a)
+print(len(a))

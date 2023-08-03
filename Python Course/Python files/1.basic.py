@@ -4,6 +4,9 @@
 there is no multi line comment in python
 but we can use triple qutation to mention comment
 """
+'''
+hi
+'''
 
 print("hi")
 print("""
@@ -22,13 +25,13 @@ print(type(c))
 print(id(a))
 print(id(b))
 print(id(c))
-e=[25,33,44,67,43,]
+e=[25,33,44,67,"43"]
 print(e[4])
 print(len(e))
 
 a= "arularasu"
 print(len(a))
 
-# \n is used to split the para
+# \n is used to create new line
 d = "hi\nhow are you\nI'm fine"
 print(d)
