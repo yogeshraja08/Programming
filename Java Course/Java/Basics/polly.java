@@ -7,10 +7,10 @@ public class polly {
 
 
     }
-    public float getWeight()
-    {
+    // public float getWeight()
+    // {
 
-    }
+    // }
 
 
 
