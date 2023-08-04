@@ -16,5 +16,5 @@ while True:
     else:
         break
 print(para)
-output=". ".join(para)
+output="_".join(para)
 print(output)
