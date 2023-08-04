@@ -10,12 +10,14 @@ class DoublyMethods {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the value : ");
         int data = input.nextInt();
+        input.close();
         return data;
     }
     int position(){
         Scanner pos = new Scanner(System.in);
         System.out.print("Enter the position : ");
         int position = pos.nextInt();
+        pos.close();
         return position;
     }
     void insertAtBegin() {
@@ -177,5 +179,6 @@ public class DoublyLinkedList extends DoublyMethods {
                 System.out.println("Enter the valid choise preference!");
             }
         }
+        input.close();
     }
 }
