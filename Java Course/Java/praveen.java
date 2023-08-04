@@ -6,6 +6,4 @@ public class praveen{
         for(int i=1;i<=school;i++){
             System.out.println(i);
         }
-        sc.close();
-    }
-}
+        sc.close()

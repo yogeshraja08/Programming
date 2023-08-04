@@ -50,7 +50,7 @@ public class Day5 {
         for(int i = name.length()-1;i>=0;i--){
             rev+=name.charAt(i); //rev = rev + name.charAt(i); 
         }
-
+        
         if(name.equals(rev)){
             System.out.println("It is palindrome");
         }
