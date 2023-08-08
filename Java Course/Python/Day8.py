@@ -1,5 +1,5 @@
-row1 = int(input("Enter the row 1 : "))
-col1 = int(input("Enter the col 1 : "))
+row1 = int(input("Enter the no. of row 1 : "))
+col1 = int(input("Enter the no. of col 1 : "))
 arr1 = []
 for i in range(row1):
     subarr1 = []
@@ -8,8 +8,8 @@ for i in range(row1):
         subarr1.append(int(input()))
     arr1.append(subarr1)
 
-row2 = int(input("Enter the row 2 : "))
-col2 = int(input("Enter the col 2 : "))
+row2 = int(input("Enter the no. of row 2 : "))
+col2 = int(input("Enter the no. of col 2 : "))
 arr2 = []
 for i in range(row2):
     subarr2 = []
@@ -34,4 +34,4 @@ if (row1==row2 and col1==col2):
         for j in range(col1):
             subsub.append(arr1[i][j] - arr2[i][j])
         sub.append(subsub)
-print("The sum of two matrix is ",sub)
+print("The sub of two matrix is ",sub)
