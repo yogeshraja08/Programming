@@ -15,5 +15,5 @@ void main(){
         }
         num = num/10;
     }
-    printf("The count of even digits is %d, The count of Odd digits is %d",countEven,countOdd);
+    printf("The count of even digits is %d,\nThe count of Odd digits is %d",countEven,countOdd);
 }
