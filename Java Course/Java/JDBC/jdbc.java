@@ -12,7 +12,6 @@
 *7. close
 */
 
-import java.io.*;
 import java.sql.*;
 
 class jdbc {
