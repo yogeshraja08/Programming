@@ -31,5 +31,6 @@ class app extends Frame{
 public class addinterfacejava {
     public static void main(String[] args) {
         app o=new app();
+
     }
 }
