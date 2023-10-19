@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoN Form</title>
+    <link rel="stylesheet" href="./CSS/MyForm.css">
+    <script src="./JS/MyForm.js"></script>
+</head>
+<body onload="refresh()">
+    <h1>YoN FORM</h1>
+    <fieldset>
+        <legend>
+            <table>
+                <tr>
+                    <td class="form-btn" id="login-form-btn" onclick="login_form()">Login</td>
+                    <td class="form-btn" id="signup-form-btn" onclick="signup_form()">Signup</td>
+                </tr>
+            </table>
+        </legend>
+        <div id="login-form" class="form-cover">
+            <div class="form">
+                <form action="./PHP/Login.php" method="post" id="login-menu">
+                    <p>
+                        Username : <br>
+                        <input type="text" name="username" id="username" required>
+                    </p>
+                    <p>
+                        Password : <br>
+                        <input type="password" name="password" id="password" required>
+                    </p>
+                    <p>
+                        <input type="reset" value="Clear Details">
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+            <div class="form-img">
+                <img src="./Images/Welcome Back Image.jpg" width="400px" alt="Login Image">
+            </div>
+        </div>
+        <div id="signup-form" class="form-cover">
+            <div class="form">
+                <form action="./PHP/Signup.php" method="post" id="signup-menu">
+                    <p>
+                        Username : <br>
+                        <input type="text" name="username" id="username" required>
+                    </p>
+                    <p>
+                        E-mail : <br>
+                        <input type="email" name="email" id="email" required>
+                    </p>
+                    <p>
+                        Password : <br>
+                        <input type="password" name="password" id="password" required>
+                    </p>
+                    <p>
+                        Confirm Password : <br>
+                        <input type="cnf-password" name="cnf-password" id="cnf-password" required>
+                    </p>
+                    <p>
+                        <input type="reset" value="Clear Details">
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+            <div class="form-img">
+                <img src="./Images/nice-meet-you-fireworks-lettering.jpg" width="400px" alt="Signup Image">
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>

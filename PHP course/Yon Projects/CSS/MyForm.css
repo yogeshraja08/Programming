@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+    color: red;
+}
+
+fieldset{
+    border: 5px solid black;
+}
+
+legend{
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+}
+
+.form-btn{
+    color: wheat;
+    background-color: rgb(50, 50, 50);
+    font-size: xx-large;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.form-btn:hover,.form-btn::after{
+    color: white;
+    background-color: black;
+}
+
+.form-cover{
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.form{
+    width: 50%;
+}
+
+.form-img{
+    width: 50%;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    transition: all 2s;
+}
