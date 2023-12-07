@@ -1,14 +1,14 @@
-// public class Methods_Objects {
-//         public static int sum(){
-//                 int b=10;
-//                 int c=20;
-//                 int a=b+c;
-//                 return a;
-//         }
-//         public static void main(String[] args){
-//                 System.out.println(sum());
-//         }
-// }
+public class Methods_Objects {
+        public static int sum(){
+                int b=10;
+                int c=20;
+                int a=b+c;
+                return a;
+        }
+        public static void main(String[] args){
+                System.out.println(sum());
+        }
+}
 
 // class Anime{
 //         String name1 = "one piece";

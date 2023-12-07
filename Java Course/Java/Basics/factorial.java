@@ -1,5 +1,5 @@
 import java.util.*;
-public class Day4 {
+public class factorial {
     public static void main(String[] args) {
         // factorial
         Scanner input = new Scanner(System.in);

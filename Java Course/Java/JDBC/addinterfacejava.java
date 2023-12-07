@@ -4,7 +4,7 @@ class app extends Frame{
     TextField txt;
     Label l1,l2,l3;
     public app(){
-        super("shyam");
+        super("Java");
         setSize(1000,600);
         setLayout(null);
         setVisible(true);
@@ -31,6 +31,5 @@ class app extends Frame{
 public class addinterfacejava {
     public static void main(String[] args) {
         app o=new app();
-
     }
 }

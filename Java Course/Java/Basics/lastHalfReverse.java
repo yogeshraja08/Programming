@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Day6 {
+public class lastHalfReverse {
     public static void main(String[] args) {
         // print last half as reverse
         Scanner input = new Scanner(System.in);
