@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me</title>
+    <link rel="shortcut icon" href="D:\Photos\Icons\heart icon.png" type="image/x-icon">
+    <style>
+        body{
+            background-image: url("D:/Photos/Backgrounds/love hearts.png");
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
+        #image{
+            width: 350px;
+            height: auto;
+            position: absolute;
+            left: 40vw;
+        }
+        #btn{
+            text-align: center;
+            position: absolute;
+            left: 43%;
+            bottom: 10%;
+        }
+        .btn{
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            transition: all 200ms;
+            margin: 20px;
+            font-size: xx-large;
+        }
+        .btn:hover{
+            color: rgb(200, 200, 200);
+            background-color: rgb(200, 0, 0);
+        }
+        #txt{
+            color: red;
+            position: absolute;
+            top:52vh;
+            left: 42vw;
+            font-size: xx-large;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: ask 1s 1 ease-out;
+        }
+        @keyframes ask {
+            0%{top: 90vh;left:42vw;color: rgba(0, 0, 0, 0);};
+            100%{top:52vh;left:42vw;color: rgb(255, 0, 0);};
+        }
+        #love{
+            color: red;
+            position: absolute;
+            top:52vh;
+            left: 42vw;
+            font-size: xx-large;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: love 200ms 5 ease-in-out alternate;
+        }
+        @keyframes love {
+            0%{color: rgba(0, 0, 0, 0);};
+            50%{color: rgb(255, 255, 255);};
+            100%{color: rgb(255, 0, 0);};
+        }
+    </style>
+    <script>
+        function yes(){
+            document.getElementById("image").src = "./Images/3d_character_loved.png";
+            document.getElementById("btn").style.display = "none";
+            document.getElementById("txt").style.display = "none";
+            document.getElementById("love").style.display = "block";
+        }
+        function no(){
+            const x = Math.random() * 250;
+            const y = Math.random() * 150;
+            document.getElementById("no-btn").style.position = "absolute";
+            document.getElementById("no-btn").style.left = `${x}%`;
+            document.getElementById("no-btn").style.top = `${y}%`;
+        }
+    </script>
+</head>
+<body onload="refresh()">
+    <!-- <h1 id="header">
+        Do You Love Me?
+    </h1> -->
+    <img id="image" src="./Images/3d_character.png" alt="DoYouLoveMe_img">
+    <br>
+    <div id="btn">
+        <button class="btn" id="yes-btn" onclick="yes()">Yes</button>
+        <button class="btn" id="no-btn" onclick="no()">No</button>
+    </div>
+    <div id="txt">
+        Do You Love Me?
+    </div>
+    <div id="love" style="display: none;">
+        😘 I too Love You 💕
+    </div>
+</body>
+</html>
