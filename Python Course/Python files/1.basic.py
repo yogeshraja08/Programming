@@ -35,3 +35,4 @@ print(len(a))
 # \n is used to create new line
 d = "hi\nhow are you\nI'm fine"
 print(d)
+print(d)
